@@ -105,6 +105,20 @@ module.exports = {
         },
       },
     },
+    {
+        use: "gridsome-plugin-htaccess",
+        options: {
+          textCompression: ["text/html"],
+          redirections: [
+              {
+                from: "/samples/",
+                to: "/docs/framework-samples/",
+              }
+            ],
+          notCachedFiles: ["/service-worker.js"],
+          forceHttps: true,
+        },
+      },
     /* {
       use: '@gridsome/plugin-sitemap',
       options: {},

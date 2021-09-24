@@ -23,3 +23,4 @@ jobs:
         run: |
           ls -al
           ls -al test
+          cat test/.env

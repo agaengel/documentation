@@ -9,12 +9,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
         with:
-          submodules: 'recursive'
-      - name: Make envfile
-        uses: SpicyPizza/create-envfile@v1
-        with:
-          envkey_DEBUG: False
-          file_name: .SpicyPizza.env          
+          submodules: 'recursive'        
       - name: Creating .env file
         uses: agaengel/envvar-to-dotenv-action@main
         env:
@@ -22,6 +17,7 @@ jobs:
           ENV_VAR2: 'value 2'
           ENV_VAR3: 'value 3'
         with:
-          variableName: ENV_VAR1,ENV_VAR2,ENV_VAR3          
+          variableName: ENV_VAR1,ENV_VAR2,ENV_VAR3
+          target: .test.env
       - name: Prepare Project build environment
         run: ls -al

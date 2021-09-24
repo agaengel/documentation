@@ -10,5 +10,13 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: 'recursive'
+      - name: Creating .env file
+        uses: fmunirdev/envvar-to-dotenv-action@v0.1.0
+        env:
+          ENV_VAR1: 'value 1'
+          ENV_VAR2: 'value 2'
+          ENV_VAR3: 'value 3'
+        with:
+          variableName: ENV_VAR1,ENV_VAR2,ENV_VAR3          
       - name: Prepare Project build environment
         run: ls -al

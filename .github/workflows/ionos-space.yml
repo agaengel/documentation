@@ -19,5 +19,7 @@ jobs:
         with:
           variableName: ENV_VAR1,ENV_VAR2,ENV_VAR3
           target: test/.env
-      - name: Prepare Project build environment
-        run: ls -al
+      - name: List Files
+        run: |
+          ls -al
+          ls -al test

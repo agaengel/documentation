@@ -7,10 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         uses: actions/checkout@v2
         with:
           submodules: 'recursive'
       - name: Prepare Project build environment
-        if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         run: ls -al

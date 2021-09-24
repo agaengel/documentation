@@ -16,7 +16,7 @@ jobs:
           envkey_DEBUG: False
           file_name: .SpicyPizza.env          
       - name: Creating .env file
-        uses: fmunirdev/envvar-to-dotenv-action@v0.1.0
+        uses: agaengel/envvar-to-dotenv-action@main
         env:
           ENV_VAR1: 'value 1'
           ENV_VAR2: 'value 2'
